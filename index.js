@@ -9,7 +9,7 @@ const chats = {}
 const stratGame = async (chatId) => {
     await bot.sendMessage(chatId, 'Я загадываю рандомное значение от 0 до 9\n А ты давай угадай)');
     const randomNumber = Math.floor(Math.random() * 10);
-    chats[chatId] = 1;
+    chats[chatId] = randomNumber;
     await bot.sendMessage(chatId, 'Отгадай значение', gameOptions);
 }
 
